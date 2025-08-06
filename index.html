@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emiliano Álvarez</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="glass">
+      <div id="logo-container" class="img-container">
+        <img src="img/logo.webp" alt="Logo" id="logo" />
+      </div>
+      <nav>
+        <a href="#start" class="hover-text">Inicio</a>
+        <a href="#about" class="hover-text">Sobre mi</a>
+        <a href="#academics" class="hover-text">Educación</a>
+        <!-- <a href="#projects" class="hover-text">Proyectos</a> -->
+        <a href="#contact" class="hover-text">Contacto</a>
+      </nav>
+    </header>
+    <main>
+      <section id="start">
+        <h1 class="title">
+          <span>Hola, soy </span><span> Emiliano Álvarez</span>
+        </h1>
+        <p id="start-subtitle">
+          &lt;Desarrollador Web / Estudiante de Tecnólogo&gt;
+        </p>
+      </section>
+      <section id="about">
+        <div class="img-container" id="img-container-about">
+          <img src="img/me.webp" alt="yo" id="img-about" />
+        </div>
+        <div class="img-container" id="about-info">
+          <div>
+            <p>
+              Soy Emiliano Álvarez, estudiante de Tecnólogo en Informática con
+              enfoque en desarrollo web. Me apasiona crear interfaces limpias,
+              funcionales y accesibles. Trabajo con tecnologías como HTML, CSS,
+              JavaScript, PHP y Git, y siempre busco aprender algo nuevo y
+              mejorar mis proyectos.
+            </p>
+            <p>
+              Me considero proactivo, resolutivo y curioso, con muchas ganas de
+              seguir creciendo como profesional.
+            </p>
+          </div>
+          <a
+            href="src/curriculum.txt"
+            download="curriculum.txt"
+            class="a-button"
+          >
+            Descargar CV
+          </a>
+        </div>
+      </section>
+      <section id="academics">
+        <h2 class="title">Educación</h2>
+        <div class="academics-section glass glass-shadow">
+          <h3 class="title">Formal</h3>
+          <ul class="timeline">
+            <li>
+              <svg
+                class="timeline-dot"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <circle cx="8" cy="8" r="8" fill="currentColor" />
+              </svg>
+              <p class="timeline-text">
+                <time datetime="2021">2021</time>
+                <span>
+                  Bachillerato Tenológico en Informática con énfasis en
+                  desarrollo web
+                </span>
+              </p>
+            </li>
+            <li>
+              <svg
+                class="timeline-dot"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <circle cx="8" cy="8" r="8" fill="currentColor" />
+              </svg>
+              <p class="timeline-text">
+                <time datetime="2024">2024</time>
+                <span> Ingeniería en Computación </span>
+              </p>
+            </li>
+            <li>
+              <svg
+                class="timeline-dot"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <circle cx="8" cy="8" r="8" fill="currentColor" />
+              </svg>
+              <p class="timeline-text">
+                <time datetime="2025">2025</time>
+                <span> Tecnólogo en Informática </span>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="academics-section glass glass-shadow">
+          <h3 class="title">Cursos</h3>
+          <ul class="timeline">
+            <li>
+              <svg
+                class="timeline-dot"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <circle cx="8" cy="8" r="8" fill="currentColor" />
+              </svg>
+              <p class="timeline-text">
+                <time datetime="2021">2021</time>
+                <span> Audeppi Teens 5 CEFR B1 </span>
+              </p>
+            </li>
+            <li>
+              <svg
+                class="timeline-dot"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <circle cx="8" cy="8" r="8" fill="currentColor" />
+              </svg>
+              <p class="timeline-text">
+                <time datetime="2023">2023</time>
+                <span>
+                  Talleres de Introducción al Mundo IT y Competencias
+                  Transversales
+                </span>
+              </p>
+            </li>
+            <li>
+              <svg
+                class="timeline-dot"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <circle cx="8" cy="8" r="8" fill="currentColor" />
+              </svg>
+              <p class="timeline-text">
+                <time datetime="2024">2024</time>
+                <span> Introducción al Testing - Globant & UKG </span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--  <section id="projects">
+        <h2 class="title">Proyectos</h2>
+      </section> -->
+      <section id="contact">
+        <h2 class="title">Contacto</h2>
+        <form name="contacto" class="glass glass-shadow" id="contact-form">
+          <div>
+            <label for="para">Para </label>
+            <input id="para" type="text" name="para" required />
+          </div>
+          <div>
+            <label> Tematica </label>
+            <select id="tema" name="tematica">
+              <option value selected disabled>-Eliga un tema-</option>
+              <option value="consulta">Consulta</option>
+              <option value="propuesta">Propuesta</option>
+              <option value="reporte">Reporte</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div>
+            <label for="asunto">Asunto </label>
+            <input id="asunto" type="text" />
+          </div>
+
+          <div>
+            <label for="cuerpo"> Cuerpo </label>
+            <textarea name="cuerpo" id="cuerpo"></textarea>
+          </div>
+
+          <input type="submit" value="Enviar" class="a-button" />
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Emiliano Álvarez</p>
+      <p>Hecho con &hearts;</p>
+    </footer>
+  </body>
+</html>
