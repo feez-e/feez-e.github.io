@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
   </head>
   <body>
     <header class="glass">
@@ -34,9 +35,9 @@
       </section>
       <section id="about">
         <div class="img-container" id="img-container-about">
-          <img src="img/me.webp" alt="yo" id="img-about" />
+          <img src="img/me.jpg" alt="yo" id="img-about" />
         </div>
-        <div class="img-container" id="about-info">
+        <div id="about-info">
           <div>
             <p>
               Soy Emiliano Álvarez, estudiante de Tecnólogo en Informática con
@@ -51,8 +52,8 @@
             </p>
           </div>
           <a
-            href="src/curriculum.txt"
-            download="curriculum.txt"
+            href="src/curriculum.pdf"
+            download="curriculum.pdf"
             class="a-button"
           >
             Descargar CV
@@ -173,10 +174,16 @@
       </section> -->
       <section id="contact">
         <h2 class="title">Contacto</h2>
-        <form name="contacto" class="glass glass-shadow" id="contact-form">
+        <form
+          action="https://formspree.io/f/xeolpwyy"
+          method="POST"
+          name="contacto"
+          class="glass glass-shadow"
+          id="contact-form"
+        >
           <div>
-            <label for="para">Para </label>
-            <input id="para" type="text" name="para" required />
+            <label for="email">Correo electrónico: </label>
+            <input id="email" type="email" name="email" required />
           </div>
           <div>
             <label> Tematica </label>
@@ -190,7 +197,7 @@
           </div>
           <div>
             <label for="asunto">Asunto </label>
-            <input id="asunto" type="text" />
+            <input name="asunto" id="asunto" type="text" />
           </div>
 
           <div>
@@ -206,5 +213,6 @@
       <p>&copy; 2025 Emiliano Álvarez</p>
       <p>Hecho con &hearts;</p>
     </footer>
+    <script src="js/emailSend.js"></script>
   </body>
 </html>

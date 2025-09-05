@@ -9,9 +9,11 @@
 
 :root {
   --background: #f9edd8;
+  --page-background: radial-gradient(ellipse at top, #f9edd8, transparent),
+    radial-gradient(ellipse at bottom, #b2946c, transparent);
   --primary-color: #292320;
   --secondary-color: #b2946c;
-  --tertiary-color: rgb(197, 175, 143);
+  --tertiary-color: #c5af8f;
   --font-size-normal: 1rem;
   --font-size-emphasis: 1.3rem;
   --font-size-big: 2rem;
@@ -46,8 +48,10 @@ body *::-webkit-scrollbar-track {
 }
 
 body {
+  font-size: var(--font-size-normal);
   height: 100vh;
-  background-color: var(--background);
+  background: var(--page-background);
+  background-attachment: fixed;
   color: var(--primary-color);
   overflow-x: hidden;
   display: grid;
@@ -273,6 +277,12 @@ h1 span {
 
 /* * CONTACT  * */
 
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 input,
 select,
 textarea {
@@ -281,6 +291,7 @@ textarea {
 }
 
 #contact-form {
+  align-self: center;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -313,4 +324,95 @@ textarea {
   max-width: 100%;
   height: 150px;
   field-sizing: content;
+}
+
+#form-popup {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 150px;
+  align-self: center;
+  animation: popup 0.5s 1;
+}
+
+@keyframes popup {
+  0% {
+    display: none;
+    color: transparent;
+    top: 80px;
+    padding: 0px;
+  }
+
+  10% {
+    padding: 30px;
+    top: 100px;
+    color: transparent;
+  }
+  100% {
+    display: block;
+    top: 150px;
+  }
+}
+
+.cross {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.cross::after,
+.cross::before {
+  content: "";
+  position: absolute;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  width: 16px;
+  height: 2px;
+  top: 7px;
+  transition: all 0.25s ease;
+}
+
+.cross::before {
+  rotate: 45deg;
+  left: 0px;
+}
+
+.cross::after {
+  rotate: -45deg;
+  right: 0px;
+}
+
+.cross:hover::after,
+.cross:hover::before {
+  width: 10px;
+}
+
+/* Media */
+
+@media (width < 900px) {
+  #img-container-about {
+    margin-right: 0px;
+    margin-bottom: 50px;
+  }
+
+  #about {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (width < 770px) {
+  .academics-section {
+    width: 70%;
+  }
+
+  #contact-form {
+    width: 70%;
+  }
 }
